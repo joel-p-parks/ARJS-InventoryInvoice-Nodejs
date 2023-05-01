@@ -1,0 +1,27 @@
+<html>
+   <head>
+    <meta charset="utf-8" />
+    <title>ActiveReportsJS Viewer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="node_modules/@grapecity/activereports/styles/ar-js-ui.css" />
+    <link rel="stylesheet" href="node_modules/@grapecity/activereports/styles/ar-js-viewer.css" />
+    <script type="text/javascript" src="node_modules/@grapecity/activereports/dist/ar-js-core.js"></script>
+    <script type="text/javascript" src="node_modules/@grapecity/activereports/dist/ar-js-viewer.js"></script>
+    <style>
+        #arjs-viewer {
+            width: 100%;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body onload="load()">
+    <div id="arjs-viewer"></div>
+    <script>
+        function load() {
+            const viewer = new ActiveReports.Viewer('#arjs-viewer');
+            viewer.open('MonthlyOrders.rdlx-json');
+        }
+    </script>
+</body>
+</html>
